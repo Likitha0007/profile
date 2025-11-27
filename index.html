@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Your Name — Portfolio</title>
+    <meta name="description" content="Portfolio of Your Name — web developer, projects, contact." />
+
+    <!-- Simple, self-contained styles -->
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --accent: #ef8354;
+            --muted: #98a4b6;
+            --text: #e6eef6;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: linear-gradient(180deg, #071022 0%, var(--bg) 100%);
+            color: var(--text);
+            line-height: 1.5
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1100px;
+            margin: 32px auto;
+            padding: 20px
+        }
+
+        header.hero {
+            display: grid;
+            gap: 18px;
+            align-items: center;
+            grid-template-columns: 120px 1fr;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.06);
+            background: linear-gradient(135deg, #111827, #0b1220)
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 28px
+        }
+
+        .hero p.lead {
+            margin: 6px 0 0;
+            color: var(--muted)
+        }
+
+        nav.top-links {
+            margin-top: 10px
+        }
+
+        nav.top-links a {
+            color: var(--text);
+            text-decoration: none;
+            margin-right: 12px;
+            padding: 6px 8px;
+            border-radius: 8px;
+            font-size: 14px
+        }
+
+        nav.top-links a:hover {
+            background: var(--glass)
+        }
+
+        /* Sections */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 18px;
+            margin-top: 22px
+        }
+
+        .card {
+            grid-column: span 12;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+            padding: 18px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.03)
+        }
+
+        .projects {
+            grid-column: span 8
+        }
+
+        .sidebar {
+            grid-column: span 4;
+            display: flex;
+            flex-direction: column;
+            gap: 12px
+        }
+
+        .project {
+            padding: 12px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            margin-bottom: 12px
+        }
+
+        .project h3 {
+            margin: 0 0 6px
+        }
+
+        .project p {
+            margin: 0;
+            color: var(--muted)
+        }
+
+        .project-links {
+            margin-top: 8px
+        }
+
+        .project-links a {
+            margin-right: 10px;
+            font-size: 14px
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        .skill {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 8px 10px;
+            border-radius: 999px;
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        footer {
+            margin-top: 28px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        /* Responsive */
+        @media (max-width:880px) {
+            header.hero {
+                grid-template-columns: 1fr;
+                text-align: center
+            }
+
+            .projects {
+                grid-column: span 12
+            }
+
+            .sidebar {
+                grid-column: span 12;
+                flex-direction: row;
+                flex-wrap: wrap
+            }
+        }
+
+        /* small utility */
+        a.button {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: linear-gradient(90deg, var(--accent), #ffb078);
+            color: #0b1220;
+            text-decoration: none;
+            font-weight: 600
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- HERO -->
+        <header class="hero">
+            <img class="avatar" src="avatar.png" alt="Your Name — avatar">
+            <div>
+                <h1>Your Name</h1>
+                <p class="lead">Web developer • Java & JavaScript • Student | I build web apps and clean UIs.</p>
+                <nav class="top-links" aria-label="Primary">
+                    <a href="#projects">Projects</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a class="button" href="https://github.com/your-username" target="_blank">GitHub</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- MAIN GRID -->
+        <main class="grid" id="main">
+
+            <!-- PROJECTS -->
+            <section class="projects card" id="projects">
+                <h2>Selected Projects</h2>
+
+                <article class="project">
+                    <h3>Blood Bank Management (Sample)</h3>
+                    <p>Full-stack PHP + MySQL project to manage donors, patients and blood inventory. Includes
+                        responsive UI and basic authentication.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/your-username/bloodbank" target="_blank">Source</a>
+                        <a href="#">Live demo</a>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <h3>Project Two — Portfolio Template</h3>
+                    <p>Single-file HTML/CSS portfolio with responsive layout and simple animations. Good starter
+                        template for GitHub Pages.</p>
+                    <div class="project-links">
+                        <a href="#">Source</a>
+                    </div>
+                </article>
+
+                <!-- Add more project blocks as needed -->
+
+            </section>
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="card">
+                    <h3>About</h3>
+                    <p style="color:var(--muted)">I'm a CS student and developer focusing on web applications, Java, and
+                        databases. I enjoy building practical projects that solve small problems.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Skills</h3>
+                    <div class="skills" aria-hidden="false">
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">Java</span>
+                        <span class="skill">PHP</span>
+                        <span class="skill">MySQL</span>
+                        <span class="skill">Git</span>
+                    </div>
+                </div>
+
+                <div class="card" id="contact">
+                    <h3>Contact</h3>
+                    <p style="color:var(--muted)">Email: <a href="mailto:you@example.com">you@example.com</a></p>
+                    <p style="color:var(--muted)">Location: City, Country</p>
+                    <p style="color:var(--muted)">Resume: <a href="#">Download</a></p>
+                </div>
+            </aside>
+
+            <!-- OPTIONAL: full-width about section -->
+            <section class="card" id="about" style="grid-column:1 / -1;margin-top:12px">
+                <h2>About me</h2>
+                <p style="color:var(--muted)">Brief paragraph about your background, what you build, what you're
+                    learning and the kind of roles/projects you're looking for. Keep 3–5 lines. Tip: use bullets for
+                    highlights.</p>
+                <ul style="color:var(--muted)">
+                    <li>🎓 Student — Bachelor of Computer Science (VTU)</li>
+                    <li>🔧 Tools — VS Code, XAMPP, Git, Chrome DevTools</li>
+                    <li>🌱 Currently learning — React, Node.js, Deployment</li>
+                </ul>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>© <span id="year"></span> Your Name — <a href="https://github.com/your-username"
+                    target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Small runtime helpers: set year and enable smooth-scroll for same-page links
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const t = document.querySelector(a.getAttribute('href'));
+                if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+
+</html>
